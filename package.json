@@ -1,0 +1,68 @@
+{
+  "name": "@dephub/assert",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A tiny, type-safe assertion library with structured errors for TypeScript/JavaScript.",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublishOnly": "pnpm check && pnpm test && pnpm build",
+    "release": "pnpm publish",
+    "docs": "lineo md 'src/**/*.ts' --outFile code.md --outDir temp",
+    "test": "node --test",
+    "check": "pnpm fmt && pnpm lint && pnpm check-types",
+    "check-types": "tsc --noEmit --skipLibCheck",
+    "lint": "eslint . --fix --max-warnings 0",
+    "fmt": "prettier --write .",
+    "clean": "rm -rf dist",
+    "build": "vite build",
+    "dev": "vite build -w --mode development"
+  },
+  "keywords": [
+    "assert",
+    "testing",
+    "validation",
+    "typescript",
+    "javascript"
+  ],
+  "author": {
+    "name": "Estarlin R",
+    "email": "dev@estarlincito.com",
+    "url": "https://estarlincito.com"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dephub-js/assert#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dephub-js/assert.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dephub-js/assert/issues"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.30.3",
+  "devDependencies": {
+    "@dephub/eslint-ts": "^1.0.5",
+    "@dephub/glob": "^1.0.2",
+    "@dephub/path": "^2.0.0",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.14.0",
+    "prettier": "^3.9.10",
+    "typescript": "6.0.3",
+    "vite": "^8.3.6",
+    "vite-plugin-dts": "^5.1.2"
+  },
+  "imports": {
+    "#/*": "./src/*"
+  }
+}
