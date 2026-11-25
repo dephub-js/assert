@@ -39,7 +39,7 @@ export default defineConfig({
   plugins: [dtsPlugin],
   resolve: {
     alias: {
-      '@': useCwd('src'),
+      '#': useCwd('src'),
     },
   },
 });

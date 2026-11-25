@@ -16,7 +16,6 @@ import { AssertionError } from '#/core/utilities/error.ts';
  */
 export function assertInstanceOf<T>(
   received: unknown,
-  // deno-lint-ignore no-explicit-any
   expected: new (...args: any[]) => T,
   message?: string,
 ): asserts received is T {

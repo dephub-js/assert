@@ -1,7 +1,7 @@
 {
   "name": "@dephub/assert",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny, type-safe assertion library with structured errors for TypeScript/JavaScript.",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -15,6 +15,8 @@
     "lint": "eslint . --fix --max-warnings 0",
     "fmt": "prettier --write .",
     "clean": "rm -rf dist",
+    "prepack": "pnpm check && pnpm build",
+    "pack": "pnpm pack",
     "build": "vite build",
     "dev": "vite build -w --mode development"
   },
@@ -44,25 +46,25 @@
   "bugs": {
     "url": "https://github.com/dephub-js/assert/issues"
   },
-  "engines": {
-    "node": ">=24.0.0"
-  },
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@10.30.3",
   "devDependencies": {
     "@dephub/eslint-ts": "^1.0.5",
-    "@dephub/glob": "^1.0.2",
-    "@dephub/path": "^2.0.0",
-    "@types/node": "^26.6.6",
-    "eslint": "^10.14.0",
-    "prettier": "^3.9.10",
+    "@dephub/glob": "^1.0.3",
+    "@dephub/path": "^2.0.1",
+    "@types/node": "^26.6.8",
+    "eslint": "^10.15.0",
+    "prettier": "^3.10.1",
     "typescript": "6.0.3",
-    "vite": "^8.3.6",
+    "vite": "^8.3.8",
     "vite-plugin-dts": "^5.1.2"
   },
   "imports": {
     "#/*": "./src/*"
-  }
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "packageManager": "pnpm@10.30.3"
 }
